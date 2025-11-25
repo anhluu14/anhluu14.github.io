@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Shield, Zap, Globe, Wallet, BarChart3, Lock } from "lucide-react";
+import { Radar, Telescope, BrainCircuit, TrendingUp, Bell, Target } from "lucide-react";
 import featureImage from "@assets/generated_images/premium_3d_gold_cryptocurrency_coin_floating_with_digital_particles..png";
 
 const features = [
   {
-    icon: Shield,
-    title: "Bank-Grade Security",
-    description: "Your funds are protected by industry-leading encryption and cold storage protocols."
+    icon: Telescope,
+    title: "Whale Watcher",
+    description: "Real-time alerts when major wallets move funds. Know before the market reacts."
   },
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Execute trades in milliseconds with our high-performance matching engine."
+    icon: BrainCircuit,
+    title: "Smart Money AI",
+    description: "Our AI analyzes on-chain patterns to identify high-win-rate wallets and copy their moves."
   },
   {
-    icon: Globe,
-    title: "Global Access",
-    description: "Trade from anywhere in the world with 24/7 support in multiple languages."
+    icon: Radar,
+    title: "Early Discovery",
+    description: "Spot accumulating tokens before they trend on social media or major exchanges."
   },
   {
-    icon: Wallet,
-    title: "Multi-Chain Support",
-    description: "Seamlessly manage assets across Ethereum, Solana, BSC, and more."
+    icon: Bell,
+    title: "Instant Alerts",
+    description: "Get push notifications the second a whale opens a position in your watched tokens."
   },
   {
-    icon: BarChart3,
-    title: "Advanced Analytics",
-    description: "Professional charting tools and real-time market insights at your fingertips."
+    icon: TrendingUp,
+    title: "Profit Tracking",
+    description: "Track the historical performance of any wallet to verify if they are truly 'Smart Money'."
   },
   {
-    icon: Lock,
-    title: "Private & Secure",
-    description: "We value your privacy. No intrusive data collection or tracking."
+    icon: Target,
+    title: "Sniper Mode",
+    description: "Automated entry tools to get you in at the same block as the whales."
   }
 ];
 
@@ -42,10 +42,10 @@ export function Features() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white">
-            Why Choose <span className="text-gradient-primary">FinSavvy</span>?
+            Trade with an <span className="text-gradient-primary">Unfair Advantage</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            We combine cutting-edge technology with user-centric design to provide the best trading experience.
+            Don't guess. Follow the money. Coby AI gives you the same data hedge funds use to dominate the market.
           </p>
         </div>
 
@@ -59,9 +59,9 @@ export function Features() {
               viewport={{ once: true }}
             >
               <Card className="p-6 h-full bg-white/5 border-white/10 backdrop-blur-md hover:bg-white/10 transition-all hover:-translate-y-1 group overflow-hidden relative">
-                <div className="absolute top-0 right-0 p-20 bg-primary/10 blur-3xl rounded-full -mr-10 -mt-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 right-0 p-20 bg-cyan-500/10 blur-3xl rounded-full -mr-10 -mt-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 
-                <div className="mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/5 text-blue-400 group-hover:text-white group-hover:from-blue-500 group-hover:to-purple-600 transition-all">
+                <div className="mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-white/5 text-cyan-400 group-hover:text-white group-hover:from-cyan-500 group-hover:to-blue-600 transition-all">
                   <feature.icon className="h-6 w-6" />
                 </div>
                 
@@ -74,15 +74,21 @@ export function Features() {
           ))}
         </div>
 
-        <div className="mt-24 grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-3xl p-8 md:p-12 border border-white/10">
+        <div className="mt-24 grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 border border-white/10">
           <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-bold uppercase tracking-wider mb-6">
+              Premium Insight
+            </div>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-              Start your crypto journey with a <span className="text-yellow-400">Gold Standard</span> platform.
+              "I found $PEPE 3 days before the pump using Coby AI."
             </h3>
+            <p className="text-gray-400 mb-8 text-lg">
+              Join 50,000+ traders who stopped gambling and started tracking the whales.
+            </p>
             <ul className="space-y-4 mb-8">
-              {['Zero fees on your first deposit', 'Earn up to 12% APY on staking', 'Instant withdrawals to your bank'].map((item, i) => (
+              {['Real-time wallet notifications', 'Copy-trade top performers', 'Filter by chain and volume'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
-                  <div className="h-6 w-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                  <div className="h-6 w-6 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-500">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -91,29 +97,50 @@ export function Features() {
                 </li>
               ))}
             </ul>
-            <button className="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors">
-              Get Started Now
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-3 px-8 rounded-full transition-colors shadow-[0_0_20px_-5px_rgba(6,182,212,0.5)]">
+              Start Free Trial
             </button>
           </div>
           <div className="relative flex justify-center">
-            <div className="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full" />
-            <img 
-              src={featureImage} 
-              alt="Gold Coin" 
-              className="relative w-64 md:w-80 lg:w-96 animate-float" 
-              style={{ animation: 'float 6s ease-in-out infinite' }}
-            />
+            <div className="absolute inset-0 bg-cyan-500/20 blur-[100px] rounded-full" />
+            <div className="relative w-full max-w-md bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <h4 className="text-white font-bold">Smart Money Alert</h4>
+                <span className="text-xs text-gray-500">Just now</span>
+              </div>
+              
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-12 w-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <span className="text-2xl">🐋</span>
+                </div>
+                <div>
+                  <p className="text-white font-medium">Whale 0x7a...992</p>
+                  <p className="text-green-400 text-sm">Bought $250K PEPE</p>
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Entry Price</span>
+                  <span className="text-white">$0.0000012</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Win Rate</span>
+                  <span className="text-green-400 font-bold">82%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">P&L (30d)</span>
+                  <span className="text-green-400 font-bold">+$1.2M</span>
+                </div>
+              </div>
+              
+              <button className="w-full mt-6 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-sm font-medium transition-colors">
+                Copy Trade
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
-        }
-      `}</style>
     </section>
   );
 }

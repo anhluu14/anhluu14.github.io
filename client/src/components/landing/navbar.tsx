@@ -13,10 +13,10 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/">
             <a className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold font-display text-xl">F</span>
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                <span className="text-white font-bold font-display text-xl">C</span>
               </div>
-              <span className="text-xl font-bold font-display tracking-tight text-white">FinSavvy</span>
+              <span className="text-xl font-bold font-display tracking-tight text-white">Coby AI</span>
             </a>
           </Link>
 

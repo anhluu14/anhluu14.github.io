@@ -8,14 +8,14 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/">
               <a className="flex items-center gap-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold font-display text-xl">F</span>
+                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                  <span className="text-white font-bold font-display text-xl">C</span>
                 </div>
-                <span className="text-xl font-bold font-display tracking-tight text-white">FinSavvy</span>
+                <span className="text-xl font-bold font-display tracking-tight text-white">Coby AI</span>
               </a>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
-              The world's most advanced cryptocurrency trading platform. Secure, fast, and built for everyone.
+              Track smart money, spot whales, and find the next 100x gem before the crowd.
             </p>
           </div>
           
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-sm">© 2025 FinSavvy. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© 2025 Coby AI. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-600 hover:text-white transition-colors text-sm">Privacy Policy</a>
             <a href="#" className="text-gray-600 hover:text-white transition-colors text-sm">Terms of Service</a>

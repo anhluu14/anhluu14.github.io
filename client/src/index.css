@@ -61,8 +61,8 @@
   --popover: 222 47% 11%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 262 83% 58%; /* Electric Purple */
-  --primary-foreground: 210 40% 98%;
+  --primary: 190 90% 50%; /* Cyan for AI/Tech feel */
+  --primary-foreground: 224 71% 4%;
 
   --secondary: 217 19% 27%;
   --secondary-foreground: 210 40% 98%;
@@ -78,7 +78,7 @@
 
   --border: 217 19% 27%;
   --input: 217 19% 27%;
-  --ring: 262 83% 58%;
+  --ring: 190 90% 50%;
 
   --radius: 0.5rem;
   
@@ -92,8 +92,8 @@
 body {
   @apply bg-background text-foreground font-sans antialiased;
   background-image: 
-    radial-gradient(circle at 50% 0%, hsla(262, 83%, 58%, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 100% 50%, hsla(200, 80%, 50%, 0.1) 0%, transparent 40%);
+    radial-gradient(circle at 50% 0%, hsla(190, 90%, 50%, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, hsla(210, 80%, 50%, 0.1) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -107,11 +107,11 @@ body {
 }
 
 .text-gradient-primary {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500;
 }
 
 .glow-effect {
-  box-shadow: 0 0 40px -10px hsla(262, 83%, 58%, 0.3);
+  box-shadow: 0 0 40px -10px hsla(190, 90%, 50%, 0.3);
 }
 
 @layer base {
