@@ -81,21 +81,13 @@ export function Insight() {
               </button>
             </div>
             
-            {/* Floating crypto emojis */}
-            <div className="absolute -top-20 -right-10 text-6xl space-y-4 pointer-events-none">
+            {/* Floating frog emoji */}
+            <div className="absolute -top-20 -right-10 text-6xl pointer-events-none">
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
                 🐸
-              </motion.div>
-            </div>
-            <div className="absolute -bottom-10 -left-5 text-6xl pointer-events-none">
-              <motion.div
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              >
-                🐕
               </motion.div>
             </div>
           </motion.div>
