@@ -22,12 +22,12 @@ export function CryptoPerformance() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
-              Track whale wallets finding <span className="text-gradient-primary">100x+ gems</span>
+              Track whale wallets finding <span className="text-gradient-primary">10x+ gems</span>
             </h2>
             
             <div className="space-y-6">
               <p className="text-gray-400 text-lg">
-                Coby Premium members follow our most successful whale wallets and consistently outperform the market. Last year, smart money picked winners that went up 100%+ while the broader market gained 30%.
+                Coby Premium members follow our most successful whale wallets and consistently outperform the market. Last year, smart money picked winners that went up 1000%+ while the broader market gained 30%.
               </p>
               
               <div className="space-y-4">
