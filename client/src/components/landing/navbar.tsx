@@ -22,7 +22,8 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Features</a>
+            <a href="#what-we-do" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">What We Do</a>
+            <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Why Us</a>
             <a href="#market" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Market</a>
             <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact</a>
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
@@ -46,7 +47,8 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-16 left-0 w-full bg-background border-b border-white/10 p-4 md:hidden flex flex-col gap-4"
           >
-            <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Features</a>
+            <a href="#what-we-do" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>What We Do</a>
+            <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Why Us</a>
             <a href="#market" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Market</a>
             <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Contact</a>
             <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">

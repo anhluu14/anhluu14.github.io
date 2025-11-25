@@ -5,7 +5,7 @@ import whatWeDoImage from "@assets/generated_images/ai_filtering_blockchain_data
 
 export function WhatWeDo() {
   return (
-    <section className="py-24 relative overflow-hidden bg-black/40">
+    <section id="what-we-do" className="py-24 relative overflow-hidden bg-black/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
