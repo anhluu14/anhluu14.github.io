@@ -12,8 +12,11 @@ const cryptoData = [
 
 export function CryptoPerformance() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="our-insights" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-xs font-bold uppercase tracking-wider mb-8">
+          Our Insights
+        </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
