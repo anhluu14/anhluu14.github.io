@@ -16,10 +16,10 @@ export default function Home() {
       <main>
         <Hero />
         <MarketTicker />
-        <CryptoPerformance />
         <KeyFeatures />
         <WhatWeDo />
         <Features />
+        <CryptoPerformance />
         <Insight />
         <Contact />
       </main>
