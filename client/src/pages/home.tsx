@@ -7,6 +7,7 @@ import { Contact } from "@/components/landing/contact";
 import { WhatWeDo } from "@/components/landing/what-we-do";
 import { Insight } from "@/components/landing/insight";
 import { KeyFeatures } from "@/components/landing/key-features";
+import { CryptoPerformance } from "@/components/landing/crypto-performance";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <MarketTicker />
         <KeyFeatures />
+        <CryptoPerformance />
         <WhatWeDo />
         <Features />
         <Insight />
