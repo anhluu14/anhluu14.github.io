@@ -27,7 +27,7 @@ export function CryptoPerformance() {
             
             <div className="space-y-6">
               <p className="text-gray-400 text-lg">
-                Coby Premium members follow our most successful whale wallets and consistently outperform the market. Last year, smart money picked winners that went up 1,000%+ while the broader market gained 30%.
+                Coby Premium members follow our most successful whale wallets and consistently outperform the market. Last year, smart money picked winners that went up 100%+ while the broader market gained 30%.
               </p>
               
               <div className="space-y-4">
