@@ -4,8 +4,37 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "sonner";
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  const submitMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error("Failed to submit");
+      return response.json();
+    },
+    onSuccess: () => {
+      toast.success("Thank you! We'll get back to you within 24 hours.");
+      setFormData({ name: "", email: "", message: "" });
+    },
+    onError: () => {
+      toast.error("Something went wrong. Please try again.");
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    submitMutation.mutate(formData);
+  };
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -27,13 +56,16 @@ export function Contact() {
             viewport={{ once: true }}
           >
             <Card className="p-6 md:p-8 bg-white/5 border-white/10 backdrop-blur-md">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
                     <Input 
                       id="name" 
-                      placeholder="Your name" 
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                      required
                       className="bg-black/20 border-white/10 text-white placeholder:text-gray-500 focus:border-cyan-500/50 focus:ring-cyan-500/20"
                     />
                   </div>
@@ -42,7 +74,10 @@ export function Contact() {
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="you@example.com" 
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      required
                       className="bg-black/20 border-white/10 text-white placeholder:text-gray-500 focus:border-cyan-500/50 focus:ring-cyan-500/20"
                     />
                   </div>
@@ -52,13 +87,20 @@ export function Contact() {
                   <label htmlFor="message" className="text-sm font-medium text-gray-300">Message</label>
                   <Textarea 
                     id="message" 
-                    placeholder="Write your message here..." 
+                    placeholder="Write your message here..."
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                    required
                     className="min-h-[150px] bg-black/20 border-white/10 text-white placeholder:text-gray-500 focus:border-cyan-500/50 focus:ring-cyan-500/20 resize-none"
                   />
                 </div>
 
-                <Button className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-6">
-                  Send Message <Send className="ml-2 h-4 w-4" />
+                <Button 
+                  type="submit"
+                  disabled={submitMutation.isPending}
+                  className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-6 disabled:opacity-50"
+                >
+                  {submitMutation.isPending ? "Sending..." : "Send Message"} <Send className="ml-2 h-4 w-4" />
                 </Button>
               </form>
             </Card>
