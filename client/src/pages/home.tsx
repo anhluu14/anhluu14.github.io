@@ -4,6 +4,7 @@ import { Features } from "@/components/landing/features";
 import { MarketTicker } from "@/components/landing/market-ticker";
 import { Footer } from "@/components/landing/footer";
 import { Contact } from "@/components/landing/contact";
+import { WhatWeDo } from "@/components/landing/what-we-do";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <MarketTicker />
+        <WhatWeDo />
         <Features />
         <Contact />
       </main>
