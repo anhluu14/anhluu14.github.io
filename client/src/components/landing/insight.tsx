@@ -12,9 +12,6 @@ export function Insight() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-xs font-bold uppercase tracking-wider mb-6">
-              Insight
-            </div>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
               "I found $PEPE 3 days before the pump using Coby AI."
             </h3>
