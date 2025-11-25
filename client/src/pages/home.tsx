@@ -17,9 +17,9 @@ export default function Home() {
         <Hero />
         <MarketTicker />
         <KeyFeatures />
+        <CryptoPerformance />
         <WhatWeDo />
         <Features />
-        <CryptoPerformance />
         <Insight />
         <Contact />
       </main>
