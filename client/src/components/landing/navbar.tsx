@@ -24,7 +24,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#market" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Market</a>
-            <a href="#community" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Community</a>
+            <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact</a>
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
               Connect Wallet
             </Button>
@@ -48,7 +48,7 @@ export function Navbar() {
           >
             <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Features</a>
             <a href="#market" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Market</a>
-            <a href="#community" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Community</a>
+            <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>Contact</a>
             <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">
               Connect Wallet
             </Button>
