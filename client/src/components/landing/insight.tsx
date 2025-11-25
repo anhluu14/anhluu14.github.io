@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import featureImage from "@assets/generated_images/premium_3d_gold_cryptocurrency_coin_floating_with_digital_particles..png";
 
 export function Insight() {
   return (
@@ -45,7 +44,11 @@ export function Insight() {
             <div className="relative w-full max-w-md bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
                 <h4 className="text-white font-bold">Smart Money Alert</h4>
-                <span className="text-xs text-gray-500">Just now</span>
+                <div className="flex gap-2 text-lg">
+                  <span>₿</span>
+                  <span>Ξ</span>
+                  <span>◎</span>
+                </div>
               </div>
               
               <div className="flex items-center gap-4 mb-6">
@@ -78,13 +81,23 @@ export function Insight() {
               </button>
             </div>
             
-            {/* Coin image behind/around the card or just floating */}
-            <img 
-              src={featureImage} 
-              alt="Gold Coin" 
-              className="absolute -top-10 -right-10 w-32 md:w-40 animate-float opacity-50 md:opacity-100 pointer-events-none" 
-              style={{ animation: 'float 6s ease-in-out infinite' }}
-            />
+            {/* Floating crypto emojis */}
+            <div className="absolute -top-20 -right-10 text-6xl space-y-4 pointer-events-none">
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                🐸
+              </motion.div>
+            </div>
+            <div className="absolute -bottom-10 -left-5 text-6xl pointer-events-none">
+              <motion.div
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              >
+                🐕
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
