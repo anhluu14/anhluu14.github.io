@@ -14,9 +14,9 @@ export default function Home() {
       <main>
         <Hero />
         <MarketTicker />
-        <Insight />
         <WhatWeDo />
         <Features />
+        <Insight />
         <Contact />
       </main>
       <Footer />
