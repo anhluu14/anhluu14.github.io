@@ -16,7 +16,7 @@ export function MarketTicker() {
       <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
       
-      <div className="flex items-center px-4 border-r border-white/10 mr-4 bg-black/20">
+      <div className="relative z-20 flex shrink-0 items-center px-4 border-r border-white/10 mr-4 bg-black/20">
         <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse mr-2" />
         <span className="text-xs font-bold text-cyan-400 uppercase tracking-wider whitespace-nowrap">Live Whale Feed</span>
       </div>
