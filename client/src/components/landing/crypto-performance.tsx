@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { TrendingUp } from "lucide-react";
 
 const cryptoData = [
-  { symbol: "BTC", name: "Bitcoin", icon: "₿", return: "+245%", whaleReturn: "+1,245%", outperformance: "+1,000%", color: "bg-orange-500" },
-  { symbol: "ETH", name: "Ethereum", icon: "Ξ", return: "+189%", whaleReturn: "+892%", outperformance: "+703%", color: "bg-blue-500" },
-  { symbol: "SOL", name: "Solana", icon: "◎", return: "+324%", whaleReturn: "+1,876%", outperformance: "+1,552%", color: "bg-purple-500" },
-  { symbol: "PEPE", name: "Pepe", icon: "🐸", return: "+412%", whaleReturn: "+4,231%", outperformance: "+3,819%", color: "bg-green-500" },
-  { symbol: "DOGE", name: "Dogecoin", icon: "🐕", return: "+156%", whaleReturn: "+623%", outperformance: "+467%", color: "bg-yellow-500" },
-  { symbol: "ARB", name: "Arbitrum", icon: "A", return: "+89%", whaleReturn: "+567%", outperformance: "+478%", color: "bg-blue-600" },
+  { symbol: "BTC", name: "Bitcoin", icon: "₿", return: "+45%", whaleReturn: "+145%", outperformance: "+100%", color: "bg-orange-500" },
+  { symbol: "ETH", name: "Ethereum", icon: "Ξ", return: "+35%", whaleReturn: "+135%", outperformance: "+100%", color: "bg-blue-500" },
+  { symbol: "SOL", name: "Solana", icon: "◎", return: "+55%", whaleReturn: "+165%", outperformance: "+110%", color: "bg-purple-500" },
+  { symbol: "PEPE", name: "Pepe", icon: "🐸", return: "+78%", whaleReturn: "+189%", outperformance: "+111%", color: "bg-green-500" },
+  { symbol: "DOGE", name: "Dogecoin", icon: "🐕", return: "+32%", whaleReturn: "+142%", outperformance: "+110%", color: "bg-yellow-500" },
+  { symbol: "ARB", name: "Arbitrum", icon: "A", return: "+28%", whaleReturn: "+138%", outperformance: "+110%", color: "bg-blue-600" },
 ];
 
 export function CryptoPerformance() {
