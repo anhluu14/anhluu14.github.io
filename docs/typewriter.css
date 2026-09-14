@@ -1,0 +1,10 @@
+.typed-heading .name-typewriter{display:inline-block;position:relative;vertical-align:baseline;margin:0;color:inherit;font:inherit;letter-spacing:inherit;white-space:pre}
+.typed-heading .name-line{margin:0;color:inherit;font:inherit;letter-spacing:inherit;vertical-align:baseline}
+.typed-heading .name-line{display:inline-block;min-height:1em}
+.typed-heading .name-typed{margin:0;color:inherit;font:inherit;letter-spacing:inherit;vertical-align:baseline}
+.typed-heading .name-cursor{display:inline-block;position:absolute;width:2px;height:.82em;background:currentColor;margin:0 0 0 3px;top:.18em;font:inherit;animation:name-cursor-blink .8s step-end infinite}
+@keyframes name-cursor-blink{0%,100%{opacity:1}50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.typed-heading .name-cursor{animation:none}}
+
+.typed-heading{font-size:clamp(22px,5vw,54px)}
+.typed-heading .name-cursor{color:var(--accent)}

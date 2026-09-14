@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600;700&display=swap');
+:root{--bg:#0c100e;--panel:#121814;--text:#dce5dd;--muted:#95a297;--accent:#7ce99d;--border:#2b3830;--amber:#e9c16e}
+html{scroll-padding-top:100px}body{background:var(--bg);font-family:'IBM Plex Mono',monospace;font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;background:repeating-linear-gradient(transparent 0,transparent 3px,#0000000b 3px,#0000000b 4px)}
+.terminal-nav{position:sticky;top:0;z-index:10;background:#0c100ef0;border-bottom:1px solid var(--border);backdrop-filter:blur(16px)}
+.nav-inner{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:17px 28px;gap:30px}
+.wordmark{font-family:inherit;font-size:17px;font-weight:600;letter-spacing:-.6px;color:var(--accent);white-space:nowrap;padding-right:10px}
+.terminal-nav nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px}.terminal-nav nav a{color:var(--muted)}.terminal-nav nav a:hover,.terminal-nav nav a:focus-visible{color:var(--accent)}
+.terminal-main{max-width:1080px;margin:auto;padding:32px 28px;display:flex;flex-direction:column;gap:26px}
+.terminal-window{border:1px solid var(--border);background:var(--panel);border-radius:7px;overflow:hidden;box-shadow:0 0 30px -20px #7ce99d40;scroll-margin-top:0}
+.window-bar{display:flex;gap:14px;align-items:center;padding:11px 16px;background:#1a231d;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);min-width:0}
+.window-bar>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.window-dots{display:flex;gap:6px;flex-shrink:0}.window-dots i{width:10px;height:10px;border-radius:50%;background:#e2706c}.window-dots i:nth-child(2){background:#dfba63}.window-dots i:nth-child(3){background:#76cc8f}.window-shell{margin-left:auto;opacity:.6}
+.window-body{padding:25px 28px}.prompt{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;font-size:13px;margin:0 0 24px;overflow-wrap:anywhere}.prompt>span{color:var(--accent)}.prompt b{font-weight:400;color:var(--muted)}.prompt code{font:inherit;color:var(--text)}
+.boot-line{font-size:13px;color:var(--muted)}.boot-line>span{color:var(--accent);margin-right:10px}h1{font:600 clamp(34px,5vw,54px)/1.2 'IBM Plex Mono',monospace;letter-spacing:-2px;margin:15px 0 19px}.terminal-period{color:var(--accent)}.bio{font-size:16px;line-height:1.9;max-width:850px;color:#bfcac1;margin:0 0 22px}
+.boot-meta{display:flex;gap:20px;font-size:13px;flex-wrap:wrap}.meta-label{color:var(--amber)}.boot-meta strong{font-weight:500;color:var(--accent)}.boot-actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 4px}.boot-actions a{border:1px solid var(--border);background:#1a231d;padding:9px 13px;border-radius:4px;font-size:13px;color:var(--accent)}.boot-actions a:hover{border-color:var(--accent);background:#203025}
+.career-log{display:flex;flex-direction:column}.log-entry{display:grid;grid-template-columns:180px minmax(0,1fr);gap:25px;padding:25px 0;border-top:1px solid var(--border)}.log-entry:first-child{padding-top:0;border-top:0}.log-entry:last-child{padding-bottom:0}.log-meta{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:8px}.commit{color:var(--amber)}.commit::before{content:"commit ";opacity:.6}.log-body{border-left:1px solid #3b5143;padding-left:24px}.log-body h3{font-size:17px;font-weight:600;line-height:1.5;margin:0}.log-body .company{font-size:14px;color:var(--accent);margin:4px 0 15px}.log-body ul{padding-left:18px;margin:0}.log-body li{font-size:14px;color:#b8c4bb;line-height:1.8;margin:8px 0}.log-body li::marker{color:var(--accent)}
+.project-folder{border-top:1px solid var(--border);padding:15px 0}.project-folder:last-child{padding-bottom:0}.project-folder summary{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:14px;color:var(--text);list-style:none;overflow-wrap:anywhere}.project-folder summary::-webkit-details-marker{display:none}.project-folder summary::before{content:"›";color:var(--accent);font-size:22px;transition:transform .2s}.project-folder[open] summary::before{transform:rotate(90deg)}.folder-icon{color:var(--amber);font-size:23px}.folder-note{margin-left:auto;color:var(--muted);font-size:10px;white-space:nowrap}.folder-content{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;margin:22px 0 8px;padding-left:23px;border-left:1px solid var(--border)}.project-copy h3{font-size:18px;line-height:1.5;margin:0 0 12px;font-weight:500}.project-copy p{font-size:14px;color:var(--muted);line-height:1.8;margin:0}.tags{gap:6px;margin-top:17px}.tags span{background:#1a231d;border-color:var(--border);font-family:inherit;font-size:11px;padding:3px 8px}.repo-link{display:inline-block;color:var(--accent);font-size:13px;margin-top:20px}.repo-link:hover{text-decoration:underline}.project-preview{min-width:0;align-self:start}.project-art{height:250px;border-radius:5px;padding:17px;font-family:'DM Sans',sans-serif}.art-caption{font-size:9px}.art-bottom{font-size:8px;left:17px;bottom:17px;max-width:75%}.round-arrow{width:29px;height:29px;font-size:17px;line-height:27px;right:14px;bottom:12px}.agent-orbit{transform:scale(.7);transform-origin:top center;width:300px;left:50%;margin-left:-150px;margin-top:3px}.trade-visual{margin-top:9px}.trade-symbol{font-size:31px}.trade-visual svg{height:110px}.trade-small{font-size:8px}
+.skills-body{padding-bottom:0}.gravity-toolkit{border:0;border-radius:0;background:transparent}.gravity-scene{height:390px;border:0}.tech-chip{font-family:'IBM Plex Mono',monospace;font-size:17px;padding:14px 20px}
+.contact-intro{font-size:16px;margin:0 0 22px;color:#bfcac1}.contact-rows{display:flex;flex-direction:column;gap:10px}.contact-rows a{display:grid;grid-template-columns:90px minmax(0,1fr) 20px;gap:12px;align-items:center;padding:13px 16px;border:1px solid var(--border);background:#19221c;border-radius:4px;font-size:14px;transition:border-color .2s}.contact-rows a:hover{border-color:var(--accent)}.contact-kind{color:var(--amber);font-size:12px}.contact-rows a>span:nth-child(2){overflow-wrap:anywhere}.contact-rows a>span:last-child{color:var(--accent)}
+.terminal-footer{display:flex;justify-content:space-between;padding:2px 0 16px;font-size:12px;color:var(--muted)}
+@media(max-width:750px){.nav-inner{align-items:start;flex-direction:column;gap:10px;padding:14px 20px}.terminal-nav nav{gap:14px;font-size:12px}.terminal-main{padding:20px 16px;gap:20px}.window-body{padding:21px 20px}.log-entry{grid-template-columns:1fr;gap:12px}.log-meta{flex-direction:row;justify-content:space-between}.log-body{padding-left:16px}.folder-content{grid-template-columns:1fr}.project-art{height:270px}.project-preview{width:100%}.folder-note{display:none}.bio{font-size:15px}.skills-body{padding-bottom:0}.tech-chip{font-size:15px;padding:13px 16px}.contact-rows a{grid-template-columns:65px minmax(0,1fr) 14px;padding:12px 10px;gap:8px;font-size:12px}.contact-kind{font-size:11px}.prompt{font-size:12px}.window-bar{font-size:11px}.contact-intro{font-size:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.wordmark .terminal-name-prefix{font:inherit;color:inherit;margin:0;vertical-align:baseline;letter-spacing:inherit;white-space:pre}
+
+@font-face{font-family:'Portfolio Geist Mono';font-style:normal;font-weight:100 900;font-display:swap;src:url('vendor/geist-mono-latin.woff2') format('woff2')}
+h1.typed-heading{font-family:'Portfolio Geist Mono',monospace;font-size:1.875rem;font-weight:700;line-height:2.25rem;letter-spacing:normal;color:#60e56b;text-shadow:0 0 8px #60e56b80}
+.typed-heading .name-typewriter{white-space:pre-wrap;max-width:100%}
+.typed-heading .name-cursor{color:#60e56b}
+@media(min-width:640px){h1.typed-heading{font-size:2.25rem;line-height:2.5rem}}
+
+.profile-meta{display:flex;flex-wrap:wrap;gap:12px 26px;margin:18px 0 0;font-size:13px;color:var(--muted)}
+.profile-meta>div{display:flex;align-items:center;gap:8px}.profile-meta dt{color:var(--amber)}.profile-meta dd{margin:0}.profile-meta .work-status{display:inline-flex;align-items:center;gap:7px;color:#60e56b}.status-dot{height:7px;width:7px;border-radius:50%;background:currentColor;box-shadow:0 0 7px #60e56b50}
+
+.boot-log{margin:0 0 24px}
+.boot-log-line{margin:3px 0;color:var(--muted);font-size:12px;line-height:1.7;animation:boot-log-reveal .2s ease-out both;animation-delay:calc(var(--boot-step) * .18s)}
+.boot-log-line>span{color:#60e56b;margin-right:8px}
+@keyframes boot-log-reveal{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.boot-log-line{animation:none}}
+
+.profile-role{font-family:'Portfolio Geist Mono',monospace;font-size:1rem;line-height:1.6;color:#005a63;margin:0 0 18px}
+h1.typed-heading{margin-bottom:10px}
+@media(min-width:640px){.profile-role{font-size:1.125rem}}
+
+#contact{background:#0f1612;border-color:#223227;box-shadow:0 0 30px -12px #60e56b30;font-family:'Portfolio Geist Mono',monospace}
+#contact .window-bar{padding:8px 12px;background:#19221d;color:#768d7a;gap:14px;font-size:12px}
+#contact .window-dots i{width:12px;height:12px}#contact .window-dots i:first-child{background:#ea3c3f}#contact .window-dots i:nth-child(2){background:#eab532}#contact .window-dots i:nth-child(3){background:#60e56b}
+#contact .window-body{padding:16px}
+#contact .prompt{font-size:12px;margin:0 0 12px;gap:8px}#contact .prompt>span{color:#60e56b}#contact .prompt b{color:#768d7a}#contact .prompt code{color:#c8e8cd}
+#contact .contact-intro{font-size:14px;line-height:1.6;color:#c8e8cd;margin:0 0 20px}
+#contact .contact-rows{gap:8px}
+#contact .contact-rows a{grid-template-columns:16px 80px minmax(0,1fr);gap:12px;padding:8px 12px;background:#19221d66;border-color:#223227;border-radius:3px;font-size:14px;line-height:1.5}
+#contact .contact-icon{width:16px;height:16px;color:#60e56b}
+#contact .contact-kind{color:#eab532;font-size:12px}#contact .contact-rows .contact-value{color:#c8e8cd;overflow-wrap:anywhere}
+#contact .contact-rows a:hover{border-color:#60e56b}#contact .contact-rows a:hover .contact-value{color:#60e56b}
+.terminal-footer{justify-content:center;text-align:center;font-family:'Portfolio Geist Mono',monospace;font-size:12px;color:#768d7a;padding:10px 0 0}.terminal-footer p{margin:0}.footer-prompt{color:#60e56b}
+@media(max-width:450px){#contact .contact-rows a{grid-template-columns:16px 62px minmax(0,1fr);gap:8px;font-size:12px}}
