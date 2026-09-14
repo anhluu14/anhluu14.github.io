@@ -81,3 +81,7 @@ h1.typed-heading{margin-bottom:10px}
 #experience .log-entry.reveal-pending{opacity:0;transform:translateY(28px) scale(.97)}
 @media(prefers-reduced-motion:reduce){#experience .log-entry,#experience .log-entry.reveal-pending{opacity:1;transform:none;transition:none}}
 @media print{#experience .log-entry.reveal-pending{opacity:1;transform:none}}
+
+.boot-explore-prompt{display:flex;flex-wrap:wrap;gap:6px;font-family:'Portfolio Geist Mono',monospace;font-size:12px;line-height:20px;margin:22px 0 0}
+.boot-explore-prompt>span{color:#60e56b}.boot-explore-prompt>a{color:#768d7a}.boot-explore-prompt>a:hover{color:#c8e8cd}
+.explore-cursor{animation:name-cursor-blink 1s step-end infinite}@media(prefers-reduced-motion:reduce){.explore-cursor{animation:none}}
