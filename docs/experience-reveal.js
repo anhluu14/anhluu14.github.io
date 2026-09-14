@@ -27,8 +27,10 @@
     observer.disconnect();
     entries.forEach(entry => entry.classList.remove('reveal-pending'));
   }
-  reducedMotion.addEventListener('change', event => {
+  function onMotionChange(event) {
     if (event.matches) revealAll();
-  });
+  }
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', onMotionChange);
+  else if (reducedMotion.addListener) reducedMotion.addListener(onMotionChange);
   window.addEventListener('beforeprint', revealAll);
 })();

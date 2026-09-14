@@ -25,7 +25,8 @@
     }
     timer = setTimeout(type, 220);
   }
-  reducedMotion.addEventListener('change', finish);
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', finish);
+  else if (reducedMotion.addListener) reducedMotion.addListener(finish);
   window.addEventListener('pagehide', finish);
   if (document.documentElement.classList.contains('profile-pending')) {
     window.addEventListener('portfolio:profile-ready', start, { once: true });
