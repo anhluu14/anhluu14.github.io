@@ -76,3 +76,8 @@ h1.typed-heading{margin-bottom:10px}
 #work .prompt + .project-folder{border-top:0;padding-top:0}
 
 #about .whoami-prompt{font-family:"Portfolio Geist Mono",monospace;font-size:12px;line-height:20px;gap:6px;margin-bottom:12px}#about .whoami-prompt>span{color:#60e56b}#about .whoami-prompt code{color:#768d7a}
+
+#experience .log-entry{opacity:1;transform:translateY(0) scale(1);transition:opacity .55s ease,transform .65s cubic-bezier(.2,.8,.2,1);transform-origin:center top}
+#experience .log-entry.reveal-pending{opacity:0;transform:translateY(28px) scale(.97)}
+@media(prefers-reduced-motion:reduce){#experience .log-entry,#experience .log-entry.reveal-pending{opacity:1;transform:none;transition:none}}
+@media print{#experience .log-entry.reveal-pending{opacity:1;transform:none}}
