@@ -11,12 +11,17 @@
     });
   }, { threshold: 0.08 });
 
-  entries.forEach(entry => {
+  function observeEntries() { entries.forEach(entry => {
     // Keep already-visible content steady when navigating directly to a section.
     if (entry.getBoundingClientRect().top < window.innerHeight) return;
     entry.classList.add('reveal-pending');
     observer.observe(entry);
-  });
+  }); }
+  if (document.documentElement.classList.contains('boot-running')) {
+    window.addEventListener('portfolio:ready', observeEntries, { once: true });
+  } else {
+    observeEntries();
+  }
 
   function revealAll() {
     observer.disconnect();

@@ -27,5 +27,9 @@
   }
   reducedMotion.addEventListener('change', finish);
   window.addEventListener('pagehide', finish);
-  start();
+  if (document.documentElement.classList.contains('profile-pending')) {
+    window.addEventListener('portfolio:profile-ready', start, { once: true });
+  } else {
+    start();
+  }
 })();

@@ -32,11 +32,15 @@ h1.typed-heading{font-family:'Portfolio Geist Mono',monospace;font-size:1.875rem
 .profile-meta{display:flex;flex-wrap:wrap;gap:12px 26px;margin:18px 0 0;font-size:13px;color:var(--muted)}
 .profile-meta>div{display:flex;align-items:center;gap:8px}.profile-meta dt{color:var(--amber)}.profile-meta dd{margin:0}.profile-meta .work-status{display:inline-flex;align-items:center;gap:7px;color:#60e56b}.status-dot{height:7px;width:7px;border-radius:50%;background:currentColor;box-shadow:0 0 7px #60e56b50}
 
-.boot-log{margin:0 0 24px}
-.boot-log-line{margin:3px 0;color:var(--muted);font-size:12px;line-height:1.7;animation:boot-log-reveal .2s ease-out both;animation-delay:calc(var(--boot-step) * .18s)}
-.boot-log-line>span{color:#60e56b;margin-right:8px}
-@keyframes boot-log-reveal{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.boot-log-line{animation:none}}
+.boot-log{display:flex;flex-direction:column;gap:4px;margin:0 0 24px;font-family:'Portfolio Geist Mono',monospace;font-weight:400;letter-spacing:normal}
+.boot-log-line{margin:0;color:#768d7a;font-size:12px;line-height:16px}
+.boot-log-line>span{color:#60e56b;margin-right:0;white-space:nowrap}
+@media(min-width:640px){.boot-log-line{font-size:14px;line-height:20px}}
+.boot-running .boot-log-line:not(.boot-visible){visibility:hidden}
+.profile-pending #about .window-body>:not(.boot-log){display:none}
+.profile-pending #about .window-body{min-height:240px}
+.boot-running .terminal-main>:not(#about){display:none}
+@media print{.profile-pending #about .window-body>:not(.boot-log),.boot-running .terminal-main>:not(#about){display:revert}.boot-running .boot-log-line{visibility:visible!important}}
 
 .profile-role{font-family:'Portfolio Geist Mono',monospace;font-size:1rem;line-height:1.6;color:#005a63;margin:0 0 18px}
 h1.typed-heading{margin-bottom:10px}
