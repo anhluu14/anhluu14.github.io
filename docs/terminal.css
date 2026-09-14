@@ -66,3 +66,5 @@ h1.typed-heading{margin-bottom:10px}
 .skill-group li>span{color:#60e56b}
 
 .skills-end-prompt{color:#60e56b;font:inherit;font-size:14px;margin:20px 0 0;white-space:pre}
+
+.skills-end-prompt{font-family:"Portfolio Geist Mono",monospace;font-size:12px;line-height:20px;margin-top:20px}.skills-prompt-cursor{color:#c8e8cd;animation:name-cursor-blink 1s step-end infinite}@media(prefers-reduced-motion:reduce){.skills-prompt-cursor{animation:none}}
