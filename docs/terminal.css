@@ -72,3 +72,5 @@ h1.typed-heading{margin-bottom:10px}
 .terminal-window .prompt>span{font-family:"Portfolio Geist Mono",monospace;font-size:12px;font-weight:400;color:#60e56b}
 
 .terminal-nav .wordmark{font-family:"Portfolio Geist Mono",monospace;font-size:14px;font-weight:700;line-height:20px;letter-spacing:normal;color:#60e56b}
+
+#work .prompt + .project-folder{border-top:0;padding-top:0}
