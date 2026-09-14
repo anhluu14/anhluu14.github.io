@@ -64,3 +64,5 @@ h1.typed-heading{margin-bottom:10px}
 .skill-group ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 0 17px}
 .skill-group li{display:inline-flex;align-items:center;gap:6px;border:1px solid #35453b;border-radius:3px;background:#19221d;padding:3px 9px;color:#c8e8cd;font-size:13px;line-height:1.5}
 .skill-group li>span{color:#60e56b}
+
+.skills-end-prompt{color:#60e56b;font:inherit;font-size:14px;margin:20px 0 0;white-space:pre}
