@@ -114,4 +114,9 @@ h1.typed-heading,.terminal-nav .wordmark{color:var(--accent);text-shadow:0 0 8px
 .boot-actions a,.tags span,.skill-group li{background:var(--terminal-secondary);border-color:var(--border)}
 .boot-actions a:hover,.boot-actions a:focus-visible{border-color:var(--accent);box-shadow:0 0 12px -6px var(--terminal-glow)}
 ::selection{background:#60e56b40;color:var(--text)}
+.terminal-nav nav{margin-left:auto;gap:4px 16px;font:400 12px/16px 'Portfolio Geist Mono',monospace}
+.terminal-nav nav a{white-space:nowrap;transition:color .15s ease}
+.terminal-nav nav .nav-prefix{color:var(--accent)}
+.terminal-nav nav a:hover,.terminal-nav nav a:focus-visible{color:var(--accent)}
+@media(max-width:750px){.terminal-nav nav{margin-left:0}}
 @media print{body::before{display:none}.terminal-window,#contact{box-shadow:none}h1.typed-heading,.terminal-nav .wordmark{text-shadow:none}}
