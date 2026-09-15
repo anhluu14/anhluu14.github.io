@@ -111,6 +111,7 @@ h1.typed-heading,.terminal-nav .wordmark{color:var(--accent);text-shadow:0 0 8px
 .boot-log-line,.terminal-nav nav a{color:var(--muted)}
 .boot-log-line>span,.terminal-window .prompt>span{color:var(--accent)}
 .bio,.log-body li{color:var(--text);color:color-mix(in srgb,var(--text) 90%,transparent)}
+.bio{font-family:'Portfolio Geist Mono',monospace;font-size:14px;font-weight:400;line-height:1.625;letter-spacing:normal;max-width:672px;text-wrap:pretty}
 .boot-actions a,.tags span,.skill-group li{background:var(--terminal-secondary);border-color:var(--border)}
 .boot-actions a:hover,.boot-actions a:focus-visible{border-color:var(--accent);box-shadow:0 0 12px -6px var(--terminal-glow)}
 ::selection{background:#60e56b40;color:var(--text)}
