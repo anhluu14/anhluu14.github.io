@@ -120,6 +120,12 @@ h1.typed-heading,.terminal-nav .wordmark{color:var(--accent);text-shadow:0 0 8px
 .terminal-nav nav .nav-prefix{color:var(--accent)}
 .project-folder summary .folder-icon{width:16px;height:16px;flex-shrink:0;color:#005a63}
 .project-screenshot{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:5px}
+.about-profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:32px;align-items:start}
+.about-profile-copy{min-width:0}
+.profile-photo-frame{margin:0;position:relative;border:1px solid var(--border);border-radius:4px;overflow:hidden;background:var(--terminal-secondary);box-shadow:0 0 24px -12px var(--terminal-glow)}
+.profile-photo-frame img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:58% 50%;filter:saturate(.9) contrast(1.04)}
+.profile-photo-frame figcaption{padding:6px 9px;border-top:1px solid var(--border);color:var(--muted);font:400 12px/16px 'Portfolio Geist Mono',monospace}
+@media(max-width:750px){.about-profile-layout{grid-template-columns:1fr}.profile-photo-frame{width:min(100%,280px);margin-top:4px}.profile-photo-frame img{aspect-ratio:3/4}}
 .terminal-nav nav a:hover,.terminal-nav nav a:focus-visible{color:var(--accent)}
 @media(max-width:750px){.terminal-nav nav{margin-left:0}}
 @media print{body::before{display:none}.terminal-window,#contact{box-shadow:none}h1.typed-heading,.terminal-nav .wordmark{text-shadow:none}}
