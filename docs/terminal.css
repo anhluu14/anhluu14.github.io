@@ -36,11 +36,14 @@ h1.typed-heading{font-family:'Portfolio Geist Mono',monospace;font-size:1.875rem
 .boot-log-line{margin:0;color:#768d7a;font-size:12px;line-height:16px}
 .boot-log-line>span{color:#60e56b;margin-right:0;white-space:nowrap}
 @media(min-width:640px){.boot-log-line{font-size:14px;line-height:20px}}
-.boot-running .boot-log-line:not(.boot-visible){visibility:hidden}
+.boot-running .boot-log-line:not(.boot-visible){display:none}
 .profile-pending #about .window-body>:not(.boot-log){display:none}
 .profile-pending #about .window-body{min-height:240px}
-.boot-running .terminal-main>:not(#about){display:none}
-@media print{.profile-pending #about .window-body>:not(.boot-log),.boot-running .terminal-main>:not(#about){display:revert}.boot-running .boot-log-line{visibility:visible!important}}
+.terminal-main>section:not(#about){transition:opacity .5s ease,transform .5s ease}
+.boot-running .terminal-main>section:not(#about):not(.boot-window-visible){visibility:hidden;opacity:0;transform:translateY(16px);pointer-events:none}
+.boot-running .terminal-footer{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.boot-running .terminal-main>section:not(#about):not(.boot-window-visible){transform:none}}
+@media print{.profile-pending #about .window-body>:not(.boot-log),.boot-running .boot-log-line{display:revert!important}.boot-running .terminal-main>:not(#about){visibility:visible!important;opacity:1!important;transform:none!important}}
 
 .profile-role{font-family:'Portfolio Geist Mono',monospace;font-size:1rem;line-height:1.6;color:#005a63;margin:0 0 18px}
 h1.typed-heading{margin-bottom:10px}

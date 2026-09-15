@@ -1,14 +1,12 @@
-// Reveal terminal output before the profile, then the remaining sections.
+// Adapted from KataTNT/portfolio's hero-boot.tsx and page.tsx sequence.
 (() => {
   const root = document.documentElement;
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  if (reducedMotion.matches || (location.hash && location.hash !== '#about')) return;
-
   root.classList.add('boot-running', 'profile-pending');
   const timers = [];
-  let profileShown = false;
   let complete = false;
   let started = false;
+  let profileShown = false;
+  const later = (fn, delay) => timers.push(setTimeout(fn, delay));
   function showProfile() {
     if (profileShown) return;
     profileShown = true;
@@ -24,17 +22,29 @@
     root.classList.remove('boot-running');
     window.dispatchEvent(new Event('portfolio:ready'));
   }
+  function revealWindows() {
+    const windows = [...document.querySelectorAll('.terminal-main > section:not(#about)')];
+    windows.forEach((section, index) => {
+      later(() => section.classList.add('boot-window-visible'), index * 200);
+    });
+    later(finish, Math.max(0, windows.length - 1) * 200);
+  }
   function start() {
     if (complete || started || document.visibilityState === 'hidden') return;
     started = true;
-    // Start the watchdog with the animation, not while mobile resources load.
-    timers.push(setTimeout(finish, 5000));
     const lines = [...document.querySelectorAll('.boot-log-line')];
-    lines.forEach((line, index) => {
-      timers.push(setTimeout(() => line.classList.add('boot-visible'), (index + 1) * 280));
-    });
-    timers.push(setTimeout(showProfile, lines.length * 280 + 350));
-    timers.push(setTimeout(finish, lines.length * 280 + 950));
+    let visible = 0;
+    function nextLine() {
+      if (visible < lines.length) {
+        later(() => {
+          lines[visible++].classList.add('boot-visible');
+          nextLine();
+        }, 280);
+      } else {
+        later(() => { showProfile(); later(revealWindows, 600); }, 350);
+      }
+    }
+    nextLine();
   }
   function whenReady() {
     start();
@@ -45,9 +55,6 @@
   } else {
     whenReady();
   }
-  function onMotionChange(event) { if (event.matches) finish(); }
-  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', onMotionChange);
-  else if (reducedMotion.addListener) reducedMotion.addListener(onMotionChange);
   window.addEventListener('hashchange', finish, { once: true });
   window.addEventListener('pagehide', finish, { once: true });
   window.addEventListener('beforeprint', finish);
